@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  mySQL:
+    image: mysql:8.1.0
+    container_name: mysqlFirst
+    restart: always
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./data:/var/lib/mysql/data
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=lard
+  postgres:
+    image: postgres:12-alpine
+    container_name: postgresFirst
+    restart: always
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=admin
+  node-app:
+    build: gate-simulator
+    image: node-app:1.0
+    ports:
+      - '9999:9999'
