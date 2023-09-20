@@ -1,8 +1,10 @@
+import static java.lang.System.getProperty
+
 plugins {
     id 'java'
 }
 
-group = 'org.example'
+group = 'ru.netology'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -12,8 +14,13 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    testCompileOnly 'org.projectlombok:lombok:1.18.28'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
+    testImplementation 'com.codeborne:selenide:6.17.2'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
 test {
     useJUnitPlatform()
+    systemProperty 'db.url', System.getProperty('db.url')
 }
