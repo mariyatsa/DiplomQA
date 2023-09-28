@@ -1,5 +1,8 @@
+package page;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import data.DataHelper;
 import org.openqa.selenium.Keys;
 
 import java.time.Duration;
@@ -10,7 +13,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class PaymentFormBuyPage {
+public class PaymentFormBuyByCreditPage {
     private SelenideElement cardNumberForm = $("[placeholder='0000 0000 0000 0000']");
     private SelenideElement monthForm = $("[placeholder='08']");
     private SelenideElement yearForm = $("[placeholder='22']");
@@ -97,6 +100,5 @@ public class PaymentFormBuyPage {
     public void emptyCVCField() {
         cvcForm.should(empty);
     }
-
 
 }
