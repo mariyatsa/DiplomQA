@@ -1,12 +1,12 @@
 package test;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import DataHelper;
-import SQLHelper;
+import data.DataHelper;
+import data.SQLHelper;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
-import MainPage;
-import PaymentFormBuyPage;
+import page.MainPage;
+import page.PaymentFormBuyPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
