@@ -26,19 +26,19 @@ GitHUB - склонировать данный проект
 2. Запускаем SUT. 
 + для MySQL: 
 
-  + В консоле ввести команду: ```java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar``` 
-    
+  + В консоле ввести команду: ```java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar```
+
 + для PostgreSQL: 
 
   + В консоле ввести команду: 
-  ```java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar```
+  ```java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jarr```
 
 
 3. Запускаем авто-тесты
 + для MySQL:
-  +  В консоле ввести команду: ```./gradlew clean test "-Ddatasource.url=jdbc:mysql://localhost:3306/app"```
+  +  В консоле ввести команду: ```./gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app```
 + для PostgreSQL:
-    + В консоле ввести команду: ```./gradlew clean test "-Ddatasource.url=jdbc:postgresql://localhost:5432/app"```
+    + В консоле ввести команду: ```./gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app"```
 5. Генерируем отчёт по итогам тестирования с помощью Allure командой:
 
    ```./gradlew allureServe```
@@ -48,6 +48,4 @@ GitHUB - склонировать данный проект
 После работы с отчетом, останавливаем работу **АllureServe** в терминале при помощи сочетания клавиш Ctrl + C и подтверждаем в терминале клавишей Y
 
 ### Документация
-План автоматизации тестирования(../docs/Plan.md)
-
    
