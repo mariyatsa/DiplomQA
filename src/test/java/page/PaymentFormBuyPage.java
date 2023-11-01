@@ -54,19 +54,19 @@ public class PaymentFormBuyPage {
     }
 
     public void waitEmptyField() {
-        emptyField.should(visible, Duration.ofSeconds(10));
+        emptyField.should(visible);
     }
 
     public void waitWrongFormat() {
-        wrongFormat.should(visible, Duration.ofSeconds(10));
+        wrongFormat.should(visible);
     }
 
     public void waitWrongCardDate() {
-        wrongCardDate.should(visible, Duration.ofSeconds(10));
+        wrongCardDate.should(visible);
     }
 
     public void waitCardExpired() {
-        cardExpired.should(visible, Duration.ofSeconds(10));
+        cardExpired.should(visible);
     }
 
     public void onlyCardField(DataHelper.CardInfo cardInfo) {

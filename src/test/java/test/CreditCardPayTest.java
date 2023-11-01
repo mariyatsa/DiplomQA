@@ -320,7 +320,7 @@ public class CreditCardPayTest {
         var month = DataHelper.getGenerateMonth(1);
         var year = DataHelper.generateYear(1);
         var owner = DataHelper.getSpecialsSymbolsOwner();
-        var cvc = DataHelper.generateCVCCode(3);
+        var cvc = DataHelper.generateCVCCode(2);
         paymentFormBuyByCreditPage.filledForm(cardNumber, month, year, owner, cvc);
         paymentFormBuyByCreditPage.waitWrongFormat();
     }

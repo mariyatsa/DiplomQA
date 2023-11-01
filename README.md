@@ -31,7 +31,7 @@ GitHUB - склонировать данный проект
 + для PostgreSQL: 
 
   + В консоле ввести команду: 
-  ```java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jarr```
+  ```java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar```
 
 
 3. Запускаем авто-тесты
