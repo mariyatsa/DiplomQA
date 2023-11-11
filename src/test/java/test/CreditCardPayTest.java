@@ -120,6 +120,7 @@ public class CreditCardPayTest {
         paymentFormBuyByCreditPage.filledForm(cardNumber, month, year, owner, cvc);
         paymentFormBuyByCreditPage.waitEmptyField();
     }
+
     @Test
     public void shouldDenyWithInvalidDateMonth() {
         paymentFormBuyByCreditPage = mainPage.payWithCreditCard();
